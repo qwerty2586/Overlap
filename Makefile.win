@@ -1,0 +1,9 @@
+BIN = freq.exe
+OBJ = main.obj overlap.obj transmitter.obj node.obj intstack.obj errors.obj
+
+.c.obj:
+	cl $< /c
+
+$(BIN): $(OBJ)
+	cl $(OBJ) /Fe$(BIN)
+
